@@ -1,0 +1,6 @@
+{
+    "use_proxy": false,
+    "auto_complete_task": false,
+    "account_delay": 5,
+    "countdown_loop": 3800
+}
