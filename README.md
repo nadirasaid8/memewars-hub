@@ -28,7 +28,7 @@ All users can send their acquired $War.bond to Guilds as Raid funding. The Honor
 - Daily Check-in Feature to sign in.
 - Claim Tresury Every 1 Hours
 - Completes All Daily And Single Quest.
-- Automatic Send $WarBond to Guild (Earn HONOR Point)
+- Automatic Send $WarBond to Guild (Earn AIRDROP Point)
 - Proxy support for multiple accounts.
 - Configurable through `config.json`.
 
@@ -68,10 +68,12 @@ Create a `config.json` file in the project root directory:
 
    ```json
    {
-       "use_proxy": false,
-       "auto_complete_task": false,
-       "account_delay": 5,
-       "countdown_loop": 3800
+      "use_proxy": false,
+      "guild_id": "07c2382c-1258-4f77-a57c-9f64caa82c1e",
+      "auto_complete_task": false,
+      "auto_send_warbond": false,
+      "account_delay": 5,
+      "countdown_loop": 3800
    }
    ```
 - `use_proxy`: Enable/disable proxy usage (true/false).

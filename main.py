@@ -1,1 +1,413 @@
-exec(__import__('base64').b64decode(b'aW1wb3J0IG9zDQppbXBvcnQgYXN5bmNpbw0KaW1wb3J0IGpzb24NCmltcG9ydCByZQ0KaW1wb3J0IGFpb2h0dHANCmltcG9ydCByYW5kb20NCmZyb20gY29sb3JhbWEgaW1wb3J0ICoNCmZyb20gdXJsbGliLnBhcnNlIGltcG9ydCBxdW90ZSwgdW5xdW90ZSwgcGFyc2VfcXMNCmZyb20gc3JjLmRlZXBsY2hhaW4gaW1wb3J0IGtuZywgcHRoLCBoanUsIG1yaCwgYnJ1LCBodG0sIGNvdW50ZG93bl90aW1lciwgbG9nLCBfYmFubmVyLCBfY2xlYXIsIHJlYWRfY29uZmlnLCBsb2dfZXJyb3INCg0KaW5pdChhdXRvcmVzZXQ9VHJ1ZSkNCg0KY2xhc3MgTWVtZXNXYXJCb3Q6DQogICAgZGVmIF9faW5pdF9fKHNlbGYpOg0KICAgICAgICBzZWxmLmNvbmZpZyA9IHJlYWRfY29uZmlnKCkNCiAgICAgICAgc2VsZi5iYXNlX3VybCA9ICJodHRwczovL21lbWVzLXdhci5tZW1lY29yZS5jb20vYXBpIg0KICAgICAgICBzZWxmLnJlZmVycmFsX2NvZGUgPSAnUlhHVDNSJw0KICAgICAgICBzZWxmLmd1aWxkX2lkID0gIjA3YzIzODJjLTEyNTgtNGY3Ny1hNTdjLTlmNjRjYWE4MmMxZSINCiAgICAgICAgc2VsZi5xdWVyeV9pZF91c2VyX2FnZW50X21hcCA9IHt9DQogICAgICAgIHNlbGYucHJveGllcyA9IHNlbGYubG9hZF9wcm94aWVzKCkNCg0KICAgICAgICB3aXRoIG9wZW4oJ3NyYy9sb2NrLWFnZW50LnR4dCcsICdyJykgYXMgZmlsZToNCiAgICAgICAgICAgIHNlbGYudXNlcl9hZ2VudHMgPSBmaWxlLnJlYWQoKS5zdHJpcCgpLnNwbGl0KCdcbicpDQoNCiAgICAgICAgd2l0aCBvcGVuKCdkYXRhLnR4dCcsICdyJykgYXMgZmlsZToNCiAgICAgICAgICAgIHNlbGYucXVlcnlfaWRzID0gZmlsZS5yZWFkKCkuc3RyaXAoKS5zcGxpdCgnXG4nKQ0KDQogICAgZGVmIGxvYWRfcHJveGllcyhzZWxmKToNCiAgICAgICAgcHJveGllc19maWxlID0gb3MucGF0aC5qb2luKG9zLnBhdGguZGlybmFtZShfX2ZpbGVfXyksICcuL3Byb3hpZXMudHh0JykNCiAgICAgICAgZm9ybWF0dGVkX3Byb3hpZXMgPSBbXQ0KICAgICAgICB3aXRoIG9wZW4ocHJveGllc19maWxlLCAncicpIGFzIGZpbGU6DQogICAgICAgICAgICBmb3IgbGluZSBpbiBmaWxlOg0KICAgICAgICAgICAgICAgIHByb3h5ID0gbGluZS5zdHJpcCgpDQogICAgICAgICAgICAgICAgaWYgcHJveHk6DQogICAgICAgICAgICAgICAgICAgIGlmIHByb3h5LnN0YXJ0c3dpdGgoInNvY2tzNTovLyIpOg0KICAgICAgICAgICAgICAgICAgICAgICAgZm9ybWF0dGVkX3Byb3hpZXMuYXBwZW5kKHByb3h5KQ0KICAgICAgICAgICAgICAgICAgICBlbGlmIG5vdCAocHJveHkuc3RhcnRzd2l0aCgiaHR0cDovLyIpIG9yIHByb3h5LnN0YXJ0c3dpdGgoImh0dHBzOi8vIikpOg0KICAgICAgICAgICAgICAgICAgICAgICAgZm9ybWF0dGVkX3Byb3hpZXMuYXBwZW5kKGYiaHR0cDovL3twcm94eX0iKQ0KICAgICAgICAgICAgICAgICAgICBlbHNlOg0KICAgICAgICAgICAgICAgICAgICAgICAgZm9ybWF0dGVkX3Byb3hpZXMuYXBwZW5kKHByb3h5KQ0KICAgICAgICByZXR1cm4gZm9ybWF0dGVkX3Byb3hpZXMNCiAgICANCiAgICBkZWYgaXNfdmFsaWRfdXNlcl9hZ2VudChzZWxmLCB1c2VyX2FnZW50KToNCiAgICAgICAgaWYgbm90IHVzZXJfYWdlbnQgb3Igbm90IGlzaW5zdGFuY2UodXNlcl9hZ2VudCwgc3RyKToNCiAgICAgICAgICAgIHJldHVybiBGYWxzZQ0KICAgICAgICBmb3JiaWRkZW5fY2hhcnNfcmVnZXggPSByJ1tcblxyXHRcYlxmXHZdJw0KICAgICAgICByZXR1cm4gbm90IGJvb2wocmUuc2VhcmNoKGZvcmJpZGRlbl9jaGFyc19yZWdleCwgdXNlcl9hZ2VudCkpDQoNCiAgICBkZWYgZ2V0X3JhbmRvbV91c2VyX2FnZW50KHNlbGYpOg0KICAgICAgICByYW5kb21fdXNlcl9hZ2VudCA9IE5vbmUNCiAgICAgICAgd2hpbGUgbm90IHJhbmRvbV91c2VyX2FnZW50IG9yIG5vdCBzZWxmLmlzX3ZhbGlkX3VzZXJfYWdlbnQocmFuZG9tX3VzZXJfYWdlbnQpOg0KICAgICAgICAgICAgcmFuZG9tX3VzZXJfYWdlbnQgPSByYW5kb20uY2hvaWNlKHNlbGYudXNlcl9hZ2VudHMpLnN0cmlwKCkNCiAgICAgICAgcmV0dXJuIHJhbmRvbV91c2VyX2FnZW50DQoNCiAgICBhc3luYyBkZWYgZ2V0X3VzZXJfaW5mbyhzZWxmLCBxdWVyeV9pZCwgcHJveHksIHNlc3Npb24pOg0KICAgICAgICB0cnk6DQogICAgICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgDQogICAgICAgICAgICBhc3luYyB3aXRoIHNlc3Npb24uZ2V0KGYne3NlbGYuYmFzZV91cmx9L3VzZXInLCBoZWFkZXJzPWhlYWRlcnMsIHByb3h5PXByb3h5KSBhcyByZXNwb25zZToNCiAgICAgICAgICAgICAgICByZXNwb25zZS5yYWlzZV9mb3Jfc3RhdHVzKCkNCiAgICAgICAgICAgICAgICBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpDQogICAgICAgICAgICAgICAgcmV0dXJuIGRhdGENCiAgICAgICAgZXhjZXB0IGFpb2h0dHAuQ2xpZW50RXJyb3IgYXMgZXJyb3I6DQogICAgICAgICAgICBsb2cobXJoICsgZidFcnJvciBnZXR0aW5nIHVzZXIgaW5mbzogZGV0YWlsIG9uIGxhc3QubG9nIScpDQogICAgICAgICAgICBsb2dfZXJyb3IoZiJ7ZXJyb3J9IikNCg0KICAgIGFzeW5jIGRlZiBzZXRfcmVmZXJyYWxfY29kZShzZWxmLCBxdWVyeV9pZCwgdXNlcl9pbmZvLCBwcm94eSwgc2Vzc2lvbik6DQogICAgICAgIGlmIHVzZXJfaW5mbyBhbmQgdXNlcl9pbmZvLmdldCgnaW5wdXRSZWZlcnJhbENvZGUnKSBpcyBOb25lOg0KICAgICAgICAgICAgdHJ5Og0KICAgICAgICAgICAgICAgIGVuY29kZWRfcXVlcnlfaWQgPSBxdW90ZShxdWVyeV9pZCkNCiAgICAgICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICAgICAnQ29va2llJzogZid0ZWxlZ3JhbUluaXREYXRhPXtlbmNvZGVkX3F1ZXJ5X2lkfScsDQogICAgICAgICAgICAgICAgICAgICdVc2VyLUFnZW50Jzogc2VsZi5xdWVyeV9pZF91c2VyX2FnZW50X21hcC5nZXQocXVlcnlfaWQpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIHVybCA9IGYne3NlbGYuYmFzZV91cmx9L3VzZXIvcmVmZXJyYWwve3NlbGYucmVmZXJyYWxfY29kZX0nDQogICAgICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLnB1dCh1cmwsIGhlYWRlcnM9aGVhZGVycywgcHJveHk9cHJveHkpIGFzIHJlc3BvbnNlOg0KICAgICAgICAgICAgICAgICAgICByZXNwb25zZS5yYWlzZV9mb3Jfc3RhdHVzKCkNCiAgICAgICAgICAgIGV4Y2VwdCBhaW9odHRwLkNsaWVudEVycm9yIGFzIGVycm9yOg0KICAgICAgICAgICAgICAgIGxvZyhtcmggKyBmJ0Vycm9yIHNldHRpbmcgcmVmZXJyYWwgZGV0YWlsIG9uIGxhc3QubG9nIScpDQogICAgICAgICAgICAgICAgbG9nX2Vycm9yKGYie2Vycm9yfSIpDQogICAgICAgIGVsc2U6DQogICAgICAgICAgICBsb2coa25nICsgZidSZWZlcnJhbCBjb2RlIGFscmVhZHkgc2V0LicpDQoNCiAgICBhc3luYyBkZWYgY2hlY2tfcmV3YXJkcyhzZWxmLCBxdWVyeV9pZCwgcHJveHksIHNlc3Npb24pOg0KICAgICAgICB0cnk6DQogICAgICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLmdldChmJ3tzZWxmLmJhc2VfdXJsfS9xdWVzdC90cmVhc3VyeS9yZXdhcmRzJywgaGVhZGVycz1oZWFkZXJzLCBwcm94eT1wcm94eSkgYXMgcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpDQogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQ0KICAgICAgICAgICAgICAgIGFtYXplbiA9IGRhdGEuZ2V0KCdkYXRhJykNCiAgICAgICAgICAgICAgICByZXR1cm4gYW1hemVuDQogICAgICAgIGV4Y2VwdCBhaW9odHRwLkNsaWVudEVycm9yIGFzIGVycm9yOg0KICAgICAgICAgICAgbG9nKG1yaCArIGYnRXJyb3IgY2hlY2tpbmcgcmV3YXJkczogZGV0YWlsIG9uIGxhc3QubG9nIScpDQogICAgICAgICAgICBsb2dfZXJyb3IoZiJ7ZXJyb3J9IikNCg0KICAgIGFzeW5jIGRlZiBjbGFpbV9yZXdhcmRzKHNlbGYsIHF1ZXJ5X2lkLCByZXdhcmRzLCBwcm94eSwgc2Vzc2lvbik6DQogICAgICAgIHRyeToNCiAgICAgICAgICAgIGVuY29kZWRfcXVlcnlfaWQgPSBxdW90ZShxdWVyeV9pZCkNCiAgICAgICAgICAgIGhlYWRlcnMgPSB7DQogICAgICAgICAgICAgICAgJ0Nvb2tpZSc6IGYndGVsZWdyYW1Jbml0RGF0YT17ZW5jb2RlZF9xdWVyeV9pZH0nLA0KICAgICAgICAgICAgICAgICdVc2VyLUFnZW50Jzogc2VsZi5xdWVyeV9pZF91c2VyX2FnZW50X21hcC5nZXQocXVlcnlfaWQpDQogICAgICAgICAgICB9DQogICAgICAgICAgICBwYXlsb2FkID0gew0KICAgICAgICAgICAgICAgICdkYXRhJzogcmV3YXJkcw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLnBvc3QoZid7c2VsZi5iYXNlX3VybH0vcXVlc3QvdHJlYXN1cnknLCBqc29uPXBheWxvYWQsIGhlYWRlcnM9aGVhZGVycywgcHJveHk9cHJveHkpIGFzIHJlc3BvbnNlOg0KICAgICAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQ0KICAgICAgICAgICAgICAgIGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCkNCiAgICAgICAgICAgICAgICByZXdhcmRzX2RhdGEgPSBkYXRhLmdldCgnZGF0YScsIHt9KS5nZXQoJ3Jld2FyZHMnLCBbXSkNCiAgICAgICAgICAgICAgICBpZiByZXdhcmRzX2RhdGE6DQogICAgICAgICAgICAgICAgICAgIHJld2FyZF9kZXRhaWxzID0gJywgJy5qb2luKFtmJ3tyZXdhcmRbInJld2FyZEFtb3VudCJdfSB7cmV3YXJkWyJyZXdhcmRUeXBlIl19JyBmb3IgcmV3YXJkIGluIHJld2FyZHNfZGF0YV0pDQogICAgICAgICAgICAgICAgICAgIGxvZyhoanUgKyBmJ1RyZWFzdXJ5IHJld2FyZHMgY2xhaW1lZDoge3Jld2FyZF9kZXRhaWxzfScpDQogICAgICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgICAgbG9nKGtuZyArICdObyByZXdhcmRzIGRhdGEgZm91bmQgaW4gdGhlIHJlc3BvbnNlLicpDQogICAgICAgIGV4Y2VwdCBhaW9odHRwLkNsaWVudEVycm9yIGFzIGVycm9yOg0KICAgICAgICAgICAgbG9nKG1yaCArIGYnRXJyb3IgY2xhaW1pbmcgcmV3YXJkczogZGV0YWlsIG9uIGxhc3QubG9nIScpDQogICAgICAgICAgICBsb2dfZXJyb3IoZiJ7ZXJyb3J9IikNCg0KICAgIGFzeW5jIGRlZiBjaGVja19pbihzZWxmLCBxdWVyeV9pZCwgcHJveHksIHNlc3Npb24pOg0KICAgICAgICB0cnk6DQogICAgICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLnBvc3QoZid7c2VsZi5iYXNlX3VybH0vcXVlc3QvY2hlY2staW4nLCBoZWFkZXJzPWhlYWRlcnMsIHByb3h5PXByb3h5KSBhcyByZXNwb25zZToNCiAgICAgICAgICAgICAgICByZXNwb25zZV9jb250ZW50ID0gYXdhaXQgcmVzcG9uc2UudGV4dCgpDQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpDQogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQ0KICAgICAgICAgICAgICAgIHVzZXJfZGF0YSA9IGRhdGEuZ2V0KCdkYXRhJywge30pLmdldCgndXNlcicsIE5vbmUpDQogICAgICAgICAgICAgICAgY29uc2VjdXRpdmVfY2hlY2tfaW4gPSBkYXRhLmdldCgnZGF0YScsIHt9KS5nZXQoJ2N1cnJlbnRDb25zZWN1dGl2ZUNoZWNrSW4nLCAwKQ0KICAgICAgICAgICAgICAgIHJld2FyZHMgPSBkYXRhLmdldCgnZGF0YScsIHt9KS5nZXQoJ3Jld2FyZHMnLCBbXSkNCg0KICAgICAgICAgICAgICAgIGlmIHVzZXJfZGF0YToNCiAgICAgICAgICAgICAgICAgICAgbG9nKGYiVXNlciBpbmZvOiB7dXNlcl9kYXRhfSIpDQogICAgICAgICAgICAgICAgbG9nKGhqdSArIGYiQ3VycmVudCBDb25zZWN1dGl2ZSBDaGVjay1Jbjoge2NvbnNlY3V0aXZlX2NoZWNrX2lufSIpDQogICAgICAgICAgICAgICAgZm9yIHJld2FyZCBpbiByZXdhcmRzOg0KICAgICAgICAgICAgICAgICAgICBsb2coaGp1ICsgZiJSZXdhcmQ6IHtyZXdhcmRbJ3Jld2FyZFR5cGUnXX0gLSBBbW91bnQ6IHtyZXdhcmRbJ3Jld2FyZEFtb3VudCddfSIpDQoNCiAgICAgICAgICAgICAgICByZXR1cm4gdXNlcl9kYXRhLCBjb25zZWN1dGl2ZV9jaGVja19pbiwgcmV3YXJkcyBpZiByZXdhcmRzIGVsc2UgTm9uZQ0KICAgICAgICAgICAgDQogICAgICAgIGV4Y2VwdCBhaW9odHRwLkNsaWVudFJlc3BvbnNlRXJyb3IgYXMgZToNCiAgICAgICAgICAgIGlmIGUuc3RhdHVzID09IDQwOToNCiAgICAgICAgICAgICAgICBpZiAiSW50ZXJuYWwgU2VydmVyIGVycm9yIiBpbiByZXNwb25zZV9jb250ZW50Og0KICAgICAgICAgICAgICAgICAgICBsb2coa25nICsgIlVzZXIgaGFzIGFscmVhZHkgY2hlY2tlZCBpbiB0b2RheSBvciBzZXJ2ZXIgZXJyb3IhIikNCiAgICAgICAgICAgICAgICBlbHNlOg0KICAgICAgICAgICAgICAgICAgICBsb2coYnJ1ICsgZiJDaGVjay1pbiBjb25mbGljdDogZGV0YWlsIG9uIGxhc3QubG9nISIpDQogICAgICAgICAgICAgICAgICAgIGxvZ19lcnJvcihmIntyZXNwb25zZV9jb250ZW50fSIpDQogICAgICAgICAgICBlbHNlOg0KICAgICAgICAgICAgICAgIGxvZyhtcmggKyBmIkVycm9yIGR1cmluZyBjaGVjay1pbiB7ZS5zdGF0dXN9OiBkZXRhaWwgb24gbGFzdC5sb2chIikNCiAgICAgICAgICAgICAgICBsb2dfZXJyb3IoZiJ7ZS5tZXNzYWdlfSIpDQoNCiAgICAgICAgICAgIHJldHVybiBOb25lLCBOb25lLCBOb25lDQoNCiAgICAgICAgZXhjZXB0IEV4Y2VwdGlvbiBhcyBlOg0KICAgICAgICAgICAgbG9nKG1yaCArIGYiVW5leHBlY3RlZCBlcnJvciBkdXJpbmcgY2hlY2staW46IGRldGFpbCBvbiBsYXN0LmxvZyEiKQ0KICAgICAgICAgICAgbG9nX2Vycm9yKGYie3N0cihlKX0iKQ0KICAgICAgICAgICAgcmV0dXJuIE5vbmUsIE5vbmUsIE5vbmUNCg0KICAgIGFzeW5jIGRlZiBwcm9jZXNzX3Rhc2soc2VsZiwgcXVlcnlfaWQsIHRhc2tfdHlwZSwgcXVlc3RfaWQsIHN0YXR1cywgcHJveHksIHNlc3Npb24sIHJld2FyZHM9Tm9uZSk6DQogICAgICAgIGVuY29kZWRfcXVlcnlfaWQgPSBxdW90ZShxdWVyeV9pZCkNCiAgICAgICAgaGVhZGVycyA9IHsNCiAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICdVc2VyLUFnZW50Jzogc2VsZi5xdWVyeV9pZF91c2VyX2FnZW50X21hcC5nZXQocXVlcnlfaWQpDQogICAgICAgIH0NCiAgICAgICAgdXJsID0gZid7c2VsZi5iYXNlX3VybH0vcXVlc3Qve3Rhc2tfdHlwZX0ve3F1ZXN0X2lkfS9wcm9ncmVzcycNCiAgICAgICAgcmV3YXJkcyA9IHJld2FyZHMgb3IgW10gDQogICAgICAgIHBheWxvYWQgPSB7DQogICAgICAgICAgICAnZGF0YSc6IHsNCiAgICAgICAgICAgICAgICAnc3RhdHVzJzogc3RhdHVzLA0KICAgICAgICAgICAgICAgICdyZXdhcmRzJzogcmV3YXJkcw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQoNCiAgICAgICAgdHJ5Og0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLnBvc3QodXJsLCBqc29uPXBheWxvYWQsIGhlYWRlcnM9aGVhZGVycywgcHJveHk9cHJveHkpIGFzIHJlc3BvbnNlOg0KICAgICAgICAgICAgICAgIHJlc3BvbnNlLnJhaXNlX2Zvcl9zdGF0dXMoKQ0KICAgICAgICAgICAgICAgIGRhdGEgPSBhd2FpdCByZXNwb25zZS5qc29uKCkNCiAgICAgICAgICAgICAgICByZXR1cm4gZGF0YQ0KICAgICAgICBleGNlcHQgYWlvaHR0cC5DbGllbnRFcnJvciBhcyBlcnJvcjoNCiAgICAgICAgICAgIGxvZyhtcmggKyBmJ0Vycm9yIHByb2Nlc3NpbmcgdGFzayAoe3Rhc2tfdHlwZX0pIGRldGFpbCBvbiBsYXN0LmxvZyEnKQ0KICAgICAgICAgICAgbG9nX2Vycm9yKGYie2Vycm9yfSIpDQogICAgICAgICAgICByZXR1cm4gTm9uZQ0KDQogICAgYXN5bmMgZGVmIGdldF9xdWVzdF9saXN0KHNlbGYsIHF1ZXJ5X2lkLCBwcm94eSwgc2Vzc2lvbiwgdGFza190eXBlPSdkYWlseScpOg0KICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgIGhlYWRlcnMgPSB7DQogICAgICAgICAgICAnQ29va2llJzogZid0ZWxlZ3JhbUluaXREYXRhPXtlbmNvZGVkX3F1ZXJ5X2lkfScsDQogICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKQ0KICAgICAgICB9DQoNCiAgICAgICAgdHJ5Og0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLmdldChmJ3tzZWxmLmJhc2VfdXJsfS9xdWVzdC97dGFza190eXBlfS9saXN0JywgaGVhZGVycz1oZWFkZXJzLCBwcm94eT1wcm94eSkgYXMgcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpDQogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQ0KICAgICAgICAgICAgICAgIGFtYXpleCA9IGRhdGEuZ2V0KCdkYXRhJywge30pLmdldCgncXVlc3RzJywgW10pDQogICAgICAgICAgICAgICAgcmV0dXJuIGFtYXpleA0KICAgICAgICBleGNlcHQgYWlvaHR0cC5DbGllbnRFcnJvciBhcyBlcnJvcjoNCiAgICAgICAgICAgIGxvZyhtcmggKyBmJ0Vycm9yIGZldGNoaW5nIHt0YXNrX3R5cGV9IGRldGFpbCBvbiBsYXN0LmxvZyEnKQ0KICAgICAgICAgICAgbG9nX2Vycm9yKGYie2Vycm9yfSIpDQogICAgICAgICAgICByZXR1cm4gW10NCg0KICAgIGFzeW5jIGRlZiBwcm9jZXNzX3F1ZXN0cyhzZWxmLCBxdWVyeV9pZCwgcHJveHksIHNlc3Npb24sIHRhc2tfdHlwZT0nZGFpbHknKToNCiAgICAgICAgcXVlc3RzID0gYXdhaXQgc2VsZi5nZXRfcXVlc3RfbGlzdChxdWVyeV9pZCwgcHJveHksIHNlc3Npb24sIHRhc2tfdHlwZSkNCiAgICAgICAgaWYgbm90IHF1ZXN0czoNCiAgICAgICAgICAgIGxvZyhrbmcgKyBmJ05vIHt0YXNrX3R5cGV9IHF1ZXN0cyBhdmFpbGFibGUnKQ0KICAgICAgICAgICAgcmV0dXJuDQoNCiAgICAgICAgZm9yIHF1ZXN0IGluIHF1ZXN0czoNCiAgICAgICAgICAgIHF1ZXN0X2lkID0gcXVlc3QuZ2V0KCdpZCcpDQogICAgICAgICAgICBpZiBub3QgcXVlc3RfaWQ6DQogICAgICAgICAgICAgICAgY29udGludWUNCg0KICAgICAgICAgICAgbG9nKGhqdSArIGYnUHJvY2Vzc2luZyB7dGFza190eXBlLmNhcGl0YWxpemUoKX0ge2hqdX1RdWVzdDoge3B0aH17cXVlc3RbInRpdGxlIl19IHtoanV9KElEOiB7cXVlc3RfaWR9KScpDQoNCiAgICAgICAgICAgIGlmIHF1ZXN0WydzdGF0dXMnXSA9PSAnR08nOg0KICAgICAgICAgICAgICAgIHZlcmlmeV9yZXNwb25zZSA9IGF3YWl0IHNlbGYucHJvY2Vzc190YXNrKHF1ZXJ5X2lkLCB0YXNrX3R5cGUsIHF1ZXN0X2lkLCAnVkVSSUZZJywgcHJveHksIHNlc3Npb24pDQogICAgICAgICAgICAgICAgaWYgdmVyaWZ5X3Jlc3BvbnNlOg0KICAgICAgICAgICAgICAgICAgICBsb2coaGp1ICsgZidUYXNrIHZlcmlmaWVkOiB7cHRofXtxdWVzdFsidGl0bGUiXX0nKQ0KDQogICAgICAgICAgICAgICAgICAgIGF3YWl0IGFzeW5jaW8uc2xlZXAoNSkNCg0KICAgICAgICAgICAgICAgICAgICBjbGFpbV9yZXNwb25zZSA9IGF3YWl0IHNlbGYucHJvY2Vzc190YXNrKHF1ZXJ5X2lkLCB0YXNrX3R5cGUsIHF1ZXN0X2lkLCAnQ0xBSU0nLCBwcm94eSwgc2Vzc2lvbikNCiAgICAgICAgICAgICAgICAgICAgaWYgY2xhaW1fcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgICAgICAgICByZXdhcmRzID0gcXVlc3QuZ2V0KCdyZXdhcmRzJywgW10pDQogICAgICAgICAgICAgICAgICAgICAgICBpZiByZXdhcmRzOg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYucHJvY2Vzc190YXNrKHF1ZXJ5X2lkLCB0YXNrX3R5cGUsIHF1ZXN0X2lkLCAnRE9ORScsIHByb3h5LCBzZXNzaW9uLCByZXdhcmRzKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxvZyhoanUgKyBmJ1Jld2FyZHMgY2xhaW1lZCBmb3Ige3B0aH17cXVlc3RbInRpdGxlIl19JykNCg0KICAgICAgICAgICAgZWxpZiBxdWVzdFsnc3RhdHVzJ10gPT0gJ1ZFUklGWSc6DQogICAgICAgICAgICAgICAgY2xhaW1fcmVzcG9uc2UgPSBhd2FpdCBzZWxmLnByb2Nlc3NfdGFzayhxdWVyeV9pZCwgdGFza190eXBlLCBxdWVzdF9pZCwgJ0NMQUlNJywgcHJveHksIHNlc3Npb24pDQogICAgICAgICAgICAgICAgaWYgY2xhaW1fcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgICAgIGxvZyhoanUgKyBmJ1Rhc2sgY2xhaW1lZDoge3F1ZXN0WyJ0aXRsZSJdfScpDQoNCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgYXN5bmNpby5zbGVlcCg1KQ0KDQogICAgICAgICAgICAgICAgICAgIHJld2FyZHMgPSBxdWVzdC5nZXQoJ3Jld2FyZHMnLCBbXSkNCiAgICAgICAgICAgICAgICAgICAgaWYgcmV3YXJkczoNCiAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYucHJvY2Vzc190YXNrKHF1ZXJ5X2lkLCB0YXNrX3R5cGUsIHF1ZXN0X2lkLCAnRE9ORScsIHByb3h5LCBzZXNzaW9uLCByZXdhcmRzKQ0KICAgICAgICAgICAgICAgICAgICAgICAgbG9nKGhqdSArIGYnUmV3YXJkcyBjbGFpbWVkIGZvciB7cXVlc3RbInRpdGxlIl19JykNCg0KICAgICAgICAgICAgZWxpZiBxdWVzdFsnc3RhdHVzJ10gPT0gJ0NMQUlNJzoNCiAgICAgICAgICAgICAgICBjbGFpbV9yZXdhcmRfcmVzcG9uc2UgPSBhd2FpdCBzZWxmLnByb2Nlc3NfdGFzayhxdWVyeV9pZCwgdGFza190eXBlLCBxdWVzdF9pZCwgJ0RPTkUnLCBwcm94eSwgc2Vzc2lvbiwgcXVlc3QuZ2V0KCdyZXdhcmRzJywgW10pKQ0KICAgICAgICAgICAgICAgIGlmIGNsYWltX3Jld2FyZF9yZXNwb25zZToNCiAgICAgICAgICAgICAgICAgICAgbG9nKGhqdSArIGYnUmV3YXJkcyBjbGFpbWVkIGZvciB7cXVlc3RbInRpdGxlIl19JykNCg0KICAgICAgICAgICAgZWxpZiBxdWVzdFsnc3RhdHVzJ10gaW4gWydET05FJywgJ0lOX1BST0dSRVNTJ106DQogICAgICAgICAgICAgICAgbG9nKGJydSArIGYnU2tpcHBpbmcgdGFzazoge3B0aH17cXVlc3RbInRpdGxlIl19IHtoanV9KFN0YXR1czoge3F1ZXN0WyJzdGF0dXMiXX0pJykNCg0KICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICBsb2coa25nICsgZidVbmtub3duIHN0YXR1cyBmb3IgcXVlc3Q6IHtxdWVzdFsidGl0bGUiXX0nKQ0KDQogICAgZGVmIHJvdW5kX3RvX25lYXJlc3Qoc2VsZiwgdmFsdWUsIHJvdW5kX3RvPTEwMDAwMDApOg0KICAgICAgICByZXR1cm4gcm91bmQodmFsdWUgLyByb3VuZF90bykgKiByb3VuZF90bw0KDQogICAgYXN5bmMgZGVmIGdldF93YXJib25kX3Rva2VucyhzZWxmLCBxdWVyeV9pZCwgcHJveHksIHNlc3Npb24pOg0KICAgICAgICB0cnk6DQogICAgICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLmdldChmJ3tzZWxmLmJhc2VfdXJsfS91c2VyJywgaGVhZGVycz1oZWFkZXJzLCBwcm94eT1wcm94eSkgYXMgcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpDQogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQ0KICAgICAgICAgICAgICAgIHdhcmJvbmRfdG9rZW5zID0gZGF0YS5nZXQoJ2RhdGEnLCB7fSkuZ2V0KCd1c2VyJywge30pLmdldCgnd2FyYm9uZFRva2VucycsIDApDQogICAgICAgICAgICAgICAgDQogICAgICAgICAgICAgICAgcmV0dXJuIGludCh3YXJib25kX3Rva2VucykNCiAgICAgICAgZXhjZXB0IGFpb2h0dHAuQ2xpZW50RXJyb3IgYXMgZXJyb3I6IA0KICAgICAgICAgICAgbG9nKG1yaCArIGYnRXJyb3IgZmV0Y2hpbmcgd2FyYm9uZCBkZXRhaWwgb24gbGFzdC5sb2chJykNCiAgICAgICAgICAgIGxvZ19lcnJvcihmIntlcnJvcn0iKQ0KICAgICAgICAgICAgcmV0dXJuIDAgIA0KDQogICAgYXN5bmMgZGVmIGRvbmF0ZV93YXJib25kX3RvX2d1aWxkKHNlbGYsIHF1ZXJ5X2lkLCB3YXJib25kX3Rva2VucywgcHJveHksIHNlc3Npb24pOg0KICAgICAgICB0cnk6DQogICAgICAgICAgICBpZiB3YXJib25kX3Rva2VucyA8PSAwOg0KICAgICAgICAgICAgICAgIGxvZyhrbmcgKyAiTm8gV2FyYm9uZCB0b2tlbnMgdG8gZG9uYXRlLiIpDQogICAgICAgICAgICAgICAgcmV0dXJuDQoNCiAgICAgICAgICAgIHJvdW5kZWRfd2FyYm9uZF90b2tlbnMgPSBzZWxmLnJvdW5kX3RvX25lYXJlc3Qod2FyYm9uZF90b2tlbnMsIDEwMDApDQogICAgICAgICAgICBlbmNvZGVkX3F1ZXJ5X2lkID0gcXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICBoZWFkZXJzID0gew0KICAgICAgICAgICAgICAgICdDb29raWUnOiBmJ3RlbGVncmFtSW5pdERhdGE9e2VuY29kZWRfcXVlcnlfaWR9JywNCiAgICAgICAgICAgICAgICAnVXNlci1BZ2VudCc6IHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXAuZ2V0KHF1ZXJ5X2lkKSwNCiAgICAgICAgICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nIA0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgcGF5bG9hZCA9IHsNCiAgICAgICAgICAgICAgICAnZ3VpbGRJZCc6IHNlbGYuZ3VpbGRfaWQsDQogICAgICAgICAgICAgICAgJ3dhcmJvbmRDb3VudCc6IHN0cihyb3VuZGVkX3dhcmJvbmRfdG9rZW5zKQ0KICAgICAgICAgICAgfQ0KDQogICAgICAgICAgICBsb2coaGp1ICsgZiJTZW5kaW5nIGRvbmF0ZSB0byBndWlsZDoge3B0aH17c2VsZi5ndWlsZF9pZH0iKQ0KICAgICAgICAgICAgYXN5bmMgd2l0aCBzZXNzaW9uLnBvc3QoZid7c2VsZi5iYXNlX3VybH0vZ3VpbGQvd2FyYm9uZCcsIGpzb249cGF5bG9hZCwgaGVhZGVycz1oZWFkZXJzLCBwcm94eT1wcm94eSkgYXMgcmVzcG9uc2U6DQogICAgICAgICAgICAgICAgcmVzcG9uc2UucmFpc2VfZm9yX3N0YXR1cygpDQogICAgICAgICAgICAgICAgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKQ0KICAgICAgICAgICAgICAgIGFtYXpleCA9IGRhdGEuZ2V0KCdkYXRhJykNCg0KICAgICAgICAgICAgICAgIGlmIGFtYXpleCBpcyBOb25lOg0KICAgICAgICAgICAgICAgICAgICBsb2coaGp1ICsgZiJEb25hdGlvbiBvZiB7cHRofXtyb3VuZGVkX3dhcmJvbmRfdG9rZW5zfSB7aGp1fVdhcmJvbmQgdG8gZ3VpbGQgd2FzIHN1Y2Nlc3NmdWwuIikNCiAgICAgICAgICAgICAgICBlbHNlOg0KICAgICAgICAgICAgICAgICAgICBsb2coYnJ1ICsgZiJFcnJvciBkdXJpbmcgZG9uYXRpb24uIERldGFpbCBvbiBsYXN0LmxvZyEiKQ0KICAgICAgICAgICAgICAgICAgICBsb2dfZXJyb3IoZiJ7ZGF0YX0iKQ0KDQogICAgICAgIGV4Y2VwdCBhaW9odHRwLkNsaWVudEVycm9yIGFzIGVycm9yOg0KICAgICAgICAgICAgbG9nKG1yaCArIGYnRXJyb3IgZG9uYXRpbmcgd2FyYm9uZC4gQ2hlY2sgbGFzdC5sb2chJykNCiAgICAgICAgICAgIGxvZ19lcnJvcihmIntlcnJvcn0iKQ0KDQogICAgYXN5bmMgZGVmIG1haW4oc2VsZik6DQogICAgICAgIHVzZV9wcm94eSA9IHNlbGYuY29uZmlnLmdldCgndXNlX3Byb3h5JywgRmFsc2UpDQogICAgICAgIGF1dG9fY29tcGxldGVfdGFzayA9IHNlbGYuY29uZmlnLmdldCgnYXV0b19jb21wbGV0ZV90YXNrJywgRmFsc2UpDQogICAgICAgIGF1dG9fc2VuZF93YXJib25kID0gc2VsZi5jb25maWcuZ2V0KCdhdXRvX3NlbmRfd2FyYm9uZCcsIEZhbHNlKQ0KICAgICAgICBhY2NvdW50X2RlbGF5ID0gc2VsZi5jb25maWcuZ2V0KCdhY2NvdW50X2RlbGF5JywgNSkNCiAgICAgICAgY291bnRkb3duX2xvb3AgPSBzZWxmLmNvbmZpZy5nZXQoJ2NvdW50ZG93bl9sb29wJywgMzgwMCkNCiAgICAgICAgdG90YWwgPSBsZW4oc2VsZi5xdWVyeV9pZHMpDQogICAgICAgIHByb3h5X2luZGV4ID0gMA0KICAgICAgICBhc3luYyB3aXRoIGFpb2h0dHAuQ2xpZW50U2Vzc2lvbigpIGFzIHNlc3Npb246DQogICAgICAgICAgICB3aGlsZSBUcnVlOg0KICAgICAgICAgICAgICAgIGZvciBpZHgsIHF1ZXJ5X2lkIGluIGVudW1lcmF0ZShzZWxmLnF1ZXJ5X2lkcyk6DQogICAgICAgICAgICAgICAgICAgIGRlY29kZWRfZGF0YSA9IHVucXVvdGUocXVlcnlfaWQpDQogICAgICAgICAgICAgICAgICAgIHBhcnNlZF9kYXRhID0gcGFyc2VfcXMoZGVjb2RlZF9kYXRhKQ0KICAgICAgICAgICAgICAgICAgICB1c2VyX2pzb24gPSBwYXJzZWRfZGF0YS5nZXQoJ3VzZXInLCBbTm9uZV0pWzBdDQoNCiAgICAgICAgICAgICAgICAgICAgdXNlcl9pbmZvID0gTm9uZQ0KICAgICAgICAgICAgICAgICAgICBwcm94eSA9IE5vbmUNCiAgICAgICAgICAgICAgICAgICAgaWYgdXNlcl9qc29uOg0KICAgICAgICAgICAgICAgICAgICAgICAgdHJ5Og0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHVzZXJfaW5mbyA9IGpzb24ubG9hZHModXNlcl9qc29uKQ0KICAgICAgICAgICAgICAgICAgICAgICAgZXhjZXB0IGpzb24uSlNPTkRlY29kZUVycm9yIGFzIGVycm9yOg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxvZyhmJ0Vycm9yIHBhcnNpbmcgdXNlciBKU09OOiB7ZXJyb3J9JykNCg0KICAgICAgICAgICAgICAgICAgICB1c2VybmFtZSA9ICdVbmtub3duIFVzZXInDQogICAgICAgICAgICAgICAgICAgIGlmIHVzZXJfaW5mbzoNCiAgICAgICAgICAgICAgICAgICAgICAgIHVzZXJuYW1lID0gdXNlcl9pbmZvLmdldCgndXNlcm5hbWUnLCB1c2VybmFtZSkNCg0KICAgICAgICAgICAgICAgICAgICBpZiBxdWVyeV9pZCBub3QgaW4gc2VsZi5xdWVyeV9pZF91c2VyX2FnZW50X21hcDoNCiAgICAgICAgICAgICAgICAgICAgICAgIHNlbGYucXVlcnlfaWRfdXNlcl9hZ2VudF9tYXBbcXVlcnlfaWRdID0gc2VsZi5nZXRfcmFuZG9tX3VzZXJfYWdlbnQoKQ0KDQogICAgICAgICAgICAgICAgICAgIGxvZyhoanUgKyBmJ0FjY291bnQ6IHtwdGh9e2lkeCArIDF9L3t0b3RhbH0nKQ0KICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgaWYgdXNlX3Byb3h5IGFuZCBzZWxmLnByb3hpZXM6DQogICAgICAgICAgICAgICAgICAgICAgICBwcm94eSA9IHNlbGYucHJveGllc1twcm94eV9pbmRleF0NCiAgICAgICAgICAgICAgICAgICAgICAgIHByb3h5X2hvc3QgPSBwcm94eS5zcGxpdCgnQCcpWy0xXQ0KICAgICAgICAgICAgICAgICAgICAgICAgbG9nKGhqdSArIGYiUHJveHk6IHtwdGh9e3Byb3h5X2hvc3R9IikNCg0KICAgICAgICAgICAgICAgICAgICAgICAgcHJveHlfaW5kZXggPSAocHJveHlfaW5kZXggKyAxKSAlIGxlbihzZWxmLnByb3hpZXMpDQogICAgICAgICAgICAgICAgICAgIGVsc2U6DQogICAgICAgICAgICAgICAgICAgICAgICBsb2cocHRoICsgIk5vIHByb3h5IHVzZWQgb3Igbm90IGFjdGl2YXRlIikgDQoNCiAgICAgICAgICAgICAgICAgICAgbG9nKGh0bSArIGYifiIgKiAzOCkNCg0KICAgICAgICAgICAgICAgICAgICB1c2VyX2luZm8gPSBhd2FpdCBzZWxmLmdldF91c2VyX2luZm8ocXVlcnlfaWQsIHByb3h5LCBzZXNzaW9uKSAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICBpZiB1c2VyX2luZm8gaXMgbm90IE5vbmU6DQogICAgICAgICAgICAgICAgICAgICAgICB1c2VyX2RhdGEgPSB1c2VyX2luZm8uZ2V0KCdkYXRhJywge30pLmdldCgndXNlcicpDQogICAgICAgICAgICAgICAgICAgICAgICBsb2coaGp1ICsgZidVc2VybmFtZToge3B0aH17dXNlcl9kYXRhWyJuaWNrbmFtZSJdfScpDQogICAgICAgICAgICAgICAgICAgICAgICBsb2coaGp1ICsgZidXYXJib25kOiB7cHRofXt1c2VyX2RhdGFbIndhcmJvbmRUb2tlbnMiXX0ge2hqdX18IEhvbm9yIFBvaW50OiB7cHRofXt1c2VyX2RhdGFbImhvbm9yUG9pbnRzIl19IHtoanV9fCBSYW5rOiB7cHRofXt1c2VyX2RhdGFbImhvbm9yUG9pbnRSYW5rIl19JykNCg0KICAgICAgICAgICAgICAgICAgICBhd2FpdCBzZWxmLmNoZWNrX2luKHF1ZXJ5X2lkLCBwcm94eSwgc2Vzc2lvbikNCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgc2VsZi5zZXRfcmVmZXJyYWxfY29kZShxdWVyeV9pZCwgdXNlcl9pbmZvLCBwcm94eSwgc2Vzc2lvbikNCg0KICAgICAgICAgICAgICAgICAgICByZXdhcmRzX2RhdGEgPSBhd2FpdCBzZWxmLmNoZWNrX3Jld2FyZHMocXVlcnlfaWQsIHByb3h5LCBzZXNzaW9uKQ0KICAgICAgICAgICAgICAgICAgICBpZiByZXdhcmRzX2RhdGEgYW5kIHJld2FyZHNfZGF0YVsnbGVmdFNlY29uZHNVbnRpbFRyZWFzdXJ5J10gPT0gMDoNCiAgICAgICAgICAgICAgICAgICAgICAgIHJld2FyZHNfdG9fY2xhaW0gPSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgJ3Jld2FyZHMnOiByZXdhcmRzX2RhdGFbJ3Jld2FyZHMnXSwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAnbGVmdFNlY29uZHNVbnRpbFRyZWFzdXJ5JzogMzYwMCwNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAncmV3YXJkQ29vbGRvd25TZWNvbmRzJzogMzYwMA0KICAgICAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICAgICAgYXdhaXQgc2VsZi5jbGFpbV9yZXdhcmRzKHF1ZXJ5X2lkLCByZXdhcmRzX3RvX2NsYWltLCBwcm94eSwgc2Vzc2lvbikNCiAgICAgICAgICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgICAgICAgIGxvZyhrbmcgKyAnVHJlYXN1cnkgUmV3YXJkcyBub3QgYXZhaWxhYmxlIHlldC4nKQ0KDQogICAgICAgICAgICAgICAgICAgIG1pbl93YXJib25kID0gMTAwMA0KICAgICAgICAgICAgICAgICAgICB3YXJib25kX3Rva2VucyA9IGF3YWl0IHNlbGYuZ2V0X3dhcmJvbmRfdG9rZW5zKHF1ZXJ5X2lkLCBwcm94eSwgc2Vzc2lvbikNCg0KICAgICAgICAgICAgICAgICAgICBpZiB3YXJib25kX3Rva2VucyA+PSBtaW5fd2FyYm9uZDoNCiAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYuZG9uYXRlX3dhcmJvbmRfdG9fZ3VpbGQocXVlcnlfaWQsIHdhcmJvbmRfdG9rZW5zLCBwcm94eSwgc2Vzc2lvbikNCiAgICAgICAgICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgICAgICAgIGxvZyhrbmcgKyBmJ1dhcmJvbmQgdG9rZW5zIGJlbG93IG1pbmltdW0gdGhyZXNob2xkICh7bWluX3dhcmJvbmR9KSB0byBkb25hdGUuJykNCg0KICAgICAgICAgICAgICAgICAgICBpZiBhdXRvX2NvbXBsZXRlX3Rhc2s6DQogICAgICAgICAgICAgICAgICAgICAgICBhd2FpdCBzZWxmLnByb2Nlc3NfcXVlc3RzKHF1ZXJ5X2lkLCBwcm94eSwgc2Vzc2lvbiwgJ2RhaWx5JykNCiAgICAgICAgICAgICAgICAgICAgICAgIGF3YWl0IHNlbGYucHJvY2Vzc19xdWVzdHMocXVlcnlfaWQsIHByb3h5LCBzZXNzaW9uLCAnc2luZ2xlJykNCiAgICAgICAgICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAgICAgICBsb2coaHRtICsgZiJ+IiAqIDM4KQ0KICAgICAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgYXdhaXQgY291bnRkb3duX3RpbWVyKGFjY291bnRfZGVsYXkpDQogICAgICAgICAgICAgICAgYXdhaXQgY291bnRkb3duX3RpbWVyKGNvdW50ZG93bl9sb29wKQ0KICAgICAgICAgICAgICAgIHByb3h5X2luZGV4ID0gMA0KDQppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOg0KICAgIF9jbGVhcigpDQogICAgX2Jhbm5lcigpDQogICAgYm90ID0gTWVtZXNXYXJCb3QoKQ0KICAgIHdoaWxlIFRydWU6DQogICAgICAgIHRyeToNCiAgICAgICAgICAgIGFzeW5jaW8ucnVuKGJvdC5tYWluKCkpDQogICAgICAgIGV4Y2VwdCBLZXlib2FyZEludGVycnVwdCBhcyBlOg0KICAgICAgICAgICAgbG9nKG1yaCArIGYiS2V5Ym9hcmQgb210ZXJydXB0ZWQgYnkgdXNlcnMuLiIpDQogICAgICAgICAgICBleGl0KDApDQo=').decode('utf-8'))
+import os
+import asyncio
+import json
+import re
+import aiohttp
+import random
+from colorama import *
+from urllib.parse import quote, unquote, parse_qs
+from src.deeplchain import kng, pth, hju, mrh, bru, htm, countdown_timer, log, _banner, _clear, read_config, log_error
+
+init(autoreset=True)
+
+class MemesWarBot:
+    def __init__(self):
+        self.config = read_config()
+        self.base_url = "https://memes-war.memecore.com/api"
+        self.referral_code = 'RXGT3R'
+        self.guild_id = self.config.get('guild_id', '07c2382c-1258-4f77-a57c-9f64caa82c1e')
+        self.query_id_user_agent_map = {}
+        self.proxies = self.load_proxies()
+
+        with open('src/lock-agent.txt', 'r') as file:
+            self.user_agents = file.read().strip().split('\n')
+
+        with open('data.txt', 'r') as file:
+            self.query_ids = file.read().strip().split('\n')
+
+    def load_proxies(self):
+        proxies_file = os.path.join(os.path.dirname(__file__), './proxies.txt')
+        formatted_proxies = []
+        with open(proxies_file, 'r') as file:
+            for line in file:
+                proxy = line.strip()
+                if proxy:
+                    if proxy.startswith("socks5://"):
+                        formatted_proxies.append(proxy)
+                    elif not (proxy.startswith("http://") or proxy.startswith("https://")):
+                        formatted_proxies.append(f"http://{proxy}")
+                    else:
+                        formatted_proxies.append(proxy)
+        return formatted_proxies
+    
+    def is_valid_user_agent(self, user_agent):
+        if not user_agent or not isinstance(user_agent, str):
+            return False
+        forbidden_chars_regex = r'[\n\r\t\b\f\v]'
+        return not bool(re.search(forbidden_chars_regex, user_agent))
+
+    def get_random_user_agent(self):
+        random_user_agent = None
+        while not random_user_agent or not self.is_valid_user_agent(random_user_agent):
+            random_user_agent = random.choice(self.user_agents).strip()
+        return random_user_agent
+
+    async def get_user_info(self, query_id, proxy, session):
+        try:
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'User-Agent': self.query_id_user_agent_map.get(query_id)
+            }
+            
+            async with session.get(f'{self.base_url}/user', headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                return data
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error getting user info: detail on last.log!')
+            log_error(f"{error}")
+
+    async def set_referral_code(self, query_id, user_info, proxy, session):
+        if user_info and user_info.get('inputReferralCode') is None:
+            try:
+                encoded_query_id = quote(query_id)
+                headers = {
+                    'Cookie': f'telegramInitData={encoded_query_id}',
+                    'User-Agent': self.query_id_user_agent_map.get(query_id)
+                }
+                url = f'{self.base_url}/user/referral/{self.referral_code}'
+                async with session.put(url, headers=headers, proxy=proxy) as response:
+                    response.raise_for_status()
+            except aiohttp.ClientError as error:
+                log(mrh + f'Error setting referral detail on last.log!')
+                log_error(f"{error}")
+        else:
+            log(kng + f'Referral code already set.')
+
+    async def check_rewards(self, query_id, proxy, session):
+        try:
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'User-Agent': self.query_id_user_agent_map.get(query_id)
+            }
+            async with session.get(f'{self.base_url}/quest/treasury/rewards', headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                amazen = data.get('data')
+                return amazen
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error checking rewards: detail on last.log!')
+            log_error(f"{error}")
+
+    async def claim_rewards(self, query_id, rewards, proxy, session):
+        try:
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'User-Agent': self.query_id_user_agent_map.get(query_id)
+            }
+            payload = {
+                'data': rewards
+            }
+            async with session.post(f'{self.base_url}/quest/treasury', json=payload, headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                rewards_data = data.get('data', {}).get('rewards', [])
+                if rewards_data:
+                    reward_details = ', '.join([f'{reward["rewardAmount"]} {reward["rewardType"]}' for reward in rewards_data])
+                    log(hju + f'Treasury rewards claimed: {pth}{reward_details}')
+                else:
+                    log(kng + 'No rewards data found in the response.')
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error claiming rewards: detail on last.log!')
+            log_error(f"{error}")
+
+    async def check_in(self, query_id, proxy, session):
+        try:
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'User-Agent': self.query_id_user_agent_map.get(query_id)
+            }
+            async with session.post(f'{self.base_url}/quest/check-in', headers=headers, proxy=proxy) as response:
+                response_content = await response.text()
+                response.raise_for_status()
+                data = await response.json()
+                user_data = data.get('data', {}).get('user', None)
+                consecutive_check_in = data.get('data', {}).get('currentConsecutiveCheckIn', 0)
+                rewards = data.get('data', {}).get('rewards', [])
+
+                if user_data:
+                    log(f"User info: {user_data}")
+                log(hju + f"Current Consecutive Check-In: {consecutive_check_in}")
+                for reward in rewards:
+                    log(hju + f"Reward: {pth}{reward['rewardType']} {hju}- Amount: {pth}{reward['rewardAmount']}")
+
+                return user_data, consecutive_check_in, rewards if rewards else None
+            
+        except aiohttp.ClientResponseError as e:
+            if e.status == 409:
+                if "Internal Server error" in response_content:
+                    log(kng + "User has already checked in today or server error!")
+                else:
+                    log(bru + f"Check-in conflict: detail on last.log!")
+                    log_error(f"{response_content}")
+            else:
+                log(mrh + f"Error during check-in {e.status}: detail on last.log!")
+                log_error(f"{e.message}")
+
+            return None, None, None
+
+        except Exception as e:
+            log(mrh + f"Unexpected error during check-in: detail on last.log!")
+            log_error(f"{str(e)}")
+            return None, None, None
+
+    async def process_task(self, query_id, task_type, quest_id, status, proxy, session, rewards=None):
+        encoded_query_id = quote(query_id)
+        headers = {
+            'Cookie': f'telegramInitData={encoded_query_id}',
+            'User-Agent': self.query_id_user_agent_map.get(query_id)
+        }
+        url = f'{self.base_url}/quest/{task_type}/{quest_id}/progress'
+        rewards = rewards or [] 
+        payload = {
+            'data': {
+                'status': status,
+                'rewards': rewards
+            }
+        }
+
+        try:
+            async with session.post(url, json=payload, headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                return data
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error processing task ({task_type}) detail on last.log!')
+            log_error(f"{error}")
+            return None
+
+    async def get_quest_list(self, query_id, proxy, session, task_type='daily'):
+        encoded_query_id = quote(query_id)
+        headers = {
+            'Cookie': f'telegramInitData={encoded_query_id}',
+            'User-Agent': self.query_id_user_agent_map.get(query_id)
+        }
+
+        try:
+            async with session.get(f'{self.base_url}/quest/{task_type}/list', headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                amazex = data.get('data', {}).get('quests', [])
+                return amazex
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error fetching {task_type} detail on last.log!')
+            log_error(f"{error}")
+            return []
+
+    async def process_quests(self, query_id, proxy, session, task_type='daily'):
+        quests = await self.get_quest_list(query_id, proxy, session, task_type)
+        if not quests:
+            log(kng + f'No {task_type} quests available')
+            return
+
+        for quest in quests:
+            quest_id = quest.get('id')
+            if not quest_id:
+                continue
+
+            log(hju + f'Processing {task_type.capitalize()} {hju}Quest: {pth}{quest["title"]} {hju}(ID: {quest_id})')
+
+            if quest['status'] == 'GO':
+                verify_response = await self.process_task(query_id, task_type, quest_id, 'VERIFY', proxy, session)
+                if verify_response:
+                    log(hju + f'Task verified: {pth}{quest["title"]}')
+
+                    await asyncio.sleep(5)
+
+                    claim_response = await self.process_task(query_id, task_type, quest_id, 'CLAIM', proxy, session)
+                    if claim_response:
+                        rewards = quest.get('rewards', [])
+                        if rewards:
+                            await self.process_task(query_id, task_type, quest_id, 'DONE', proxy, session, rewards)
+                            log(hju + f'Rewards claimed for {pth}{quest["title"]}')
+
+            elif quest['status'] == 'VERIFY':
+                claim_response = await self.process_task(query_id, task_type, quest_id, 'CLAIM', proxy, session)
+                if claim_response:
+                    log(hju + f'Task claimed: {pth}{quest["title"]}')
+
+                    await asyncio.sleep(5)
+
+                    rewards = quest.get('rewards', [])
+                    if rewards:
+                        await self.process_task(query_id, task_type, quest_id, 'DONE', proxy, session, rewards)
+                        log(hju + f'Rewards claimed for {pth}{quest["title"]}')
+
+            elif quest['status'] == 'CLAIM':
+                claim_reward_response = await self.process_task(query_id, task_type, quest_id, 'DONE', proxy, session, quest.get('rewards', []))
+                if claim_reward_response:
+                    log(hju + f'Rewards claimed for {quest["title"]}')
+
+            elif quest['status'] in ['DONE', 'IN_PROGRESS']:
+                log(bru + f'Skipping task: {pth}{quest["title"]} {hju}(Status: {quest["status"]})')
+
+            else:
+                log(kng + f'Unknown status for quest: {quest["title"]}')
+
+    def round_to_nearest(self, value, round_to=1000):
+        return round(value / round_to) * round_to
+
+    async def get_warbond_tokens(self, query_id, proxy, session):
+        try:
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'User-Agent': self.query_id_user_agent_map.get(query_id)
+            }
+            async with session.get(f'{self.base_url}/user', headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                warbond_tokens = data.get('data', {}).get('user', {}).get('warbondTokens', 0)
+                
+                return int(warbond_tokens)
+        except aiohttp.ClientError as error: 
+            log(mrh + f'Error fetching warbond detail on last.log!')
+            log_error(f"{error}")
+            return 0  
+
+    async def donate_warbond_to_guild(self, query_id, warbond_tokens, proxy, session):
+        try:
+            if warbond_tokens <= 0:
+                log(kng + "No Warbond tokens to donate.")
+                return
+
+            rounded_warbond_tokens = self.round_to_nearest(warbond_tokens, 1000)
+            if rounded_warbond_tokens != warbond_tokens:
+                log(f"Rounded warbond tokens: {warbond_tokens} -> {rounded_warbond_tokens}")
+
+            encoded_query_id = quote(query_id)
+            headers = {
+                'Cookie': f'telegramInitData={encoded_query_id}',
+                'origin': 'https://memes-war.memecore.com/',
+                'referer': 'https://memes-war.memecore.com/guild',
+                'User-Agent': self.query_id_user_agent_map.get(query_id),
+                'Content-Type': 'application/json' 
+            }
+
+            payload = {
+                'guildId': self.guild_id,
+                'warbondCount': warbond_tokens
+            }
+
+            log(hju + f"Sending donation to guild: {pth}{self.guild_id}")
+            async with session.post(f'{self.base_url}/guild/warbond', json=payload, headers=headers, proxy=proxy) as response:
+                response.raise_for_status()
+                data = await response.json()
+                amazex = data.get('data')
+
+                if amazex is None:
+                    log(hju + f"Donation of {pth}{rounded_warbond_tokens} {hju}Warbond to guild was successful.")
+                else:
+                    log(bru + f"Error during donation. Detail on last.log!")
+                    log_error(f"Response Data: {data}, Full Response: {response.text()}")
+
+        except aiohttp.ClientError as error:
+            log(mrh + f'Error donating warbond. Check last.log!')
+            log_error(f"{error}")
+
+    async def main(self):
+        use_proxy = self.config.get('use_proxy', False)
+        auto_complete_task = self.config.get('auto_complete_task', False)
+        auto_send_warbond = self.config.get('auto_send_warbond', False)
+        account_delay = self.config.get('account_delay', 5)
+        countdown_loop = self.config.get('countdown_loop', 3800)
+        total = len(self.query_ids)
+        proxy_index = 0
+        async with aiohttp.ClientSession() as session:
+            while True:
+                for idx, query_id in enumerate(self.query_ids):
+                    decoded_data = unquote(query_id)
+                    parsed_data = parse_qs(decoded_data)
+                    user_json = parsed_data.get('user', [None])[0]
+
+                    user_info = None
+                    proxy = None
+                    if user_json:
+                        try:
+                            user_info = json.loads(user_json)
+                        except json.JSONDecodeError as error:
+                            log(f'Error parsing user JSON: {error}')
+
+                    username = 'Unknown User'
+                    if user_info:
+                        username = user_info.get('username', username)
+
+                    if query_id not in self.query_id_user_agent_map:
+                        self.query_id_user_agent_map[query_id] = self.get_random_user_agent()
+
+                    log(hju + f'Account: {pth}{idx + 1}/{total}')
+                    
+                    if use_proxy and self.proxies:
+                        proxy = self.proxies[proxy_index]
+                        proxy_host = proxy.split('@')[-1]
+                        log(hju + f"Proxy: {pth}{proxy_host}")
+
+                        proxy_index = (proxy_index + 1) % len(self.proxies)
+                    else:
+                        log(pth + "No proxy used or not activate") 
+
+                    log(htm + f"~" * 38)
+
+                    user_info = await self.get_user_info(query_id, proxy, session)            
+                    if user_info is not None:
+                        user_data = user_info.get('data', {}).get('user')
+                        log(hju + f'Username: {pth}{user_data["nickname"]}')
+                        log(hju + f'Warbond: {pth}{user_data["warbondTokens"]} {hju}| Honor Point: {pth}{user_data["honorPoints"]} {hju}| Rank: {pth}{user_data["honorPointRank"]}')
+
+                    await self.check_in(query_id, proxy, session)
+                    await self.set_referral_code(query_id, user_info, proxy, session)
+
+                    rewards_data = await self.check_rewards(query_id, proxy, session)
+                    if rewards_data and rewards_data['leftSecondsUntilTreasury'] == 0:
+                        rewards_to_claim = {
+                            'rewards': rewards_data['rewards'],
+                            'leftSecondsUntilTreasury': 3600,
+                            'rewardCooldownSeconds': 3600
+                        }
+                        await self.claim_rewards(query_id, rewards_to_claim, proxy, session)
+                    else:
+                        log(kng + 'Treasury Rewards not available yet.')
+
+                    if auto_send_warbond:
+                        min_warbond = 1000
+                        warbond_tokens = await self.get_warbond_tokens(query_id, proxy, session)
+
+                        if warbond_tokens >= min_warbond:
+                            await self.donate_warbond_to_guild(query_id, warbond_tokens, proxy, session)
+                        else:
+                            log(kng + f'Warbond tokens below minimum threshold {pth}({min_warbond}) {kng}to donate.')
+
+                    if auto_complete_task:
+                        await self.process_quests(query_id, proxy, session, 'daily')
+                        await self.process_quests(query_id, proxy, session, 'single')
+                        
+                    log(htm + f"~" * 38)
+                    
+                    await countdown_timer(account_delay)
+                await countdown_timer(countdown_loop)
+                proxy_index = 0
+
+if __name__ == "__main__":
+    _clear()
+    _banner()
+    bot = MemesWarBot()
+    while True:
+        try:
+            asyncio.run(bot.main())
+        except KeyboardInterrupt as e:
+            log(mrh + f"Keyboard omterrupted by users..")
+            exit(0)

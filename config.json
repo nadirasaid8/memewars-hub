@@ -1,6 +1,8 @@
 {
     "use_proxy": false,
+    "guild_id": "07c2382c-1258-4f77-a57c-9f64caa82c1e",
     "auto_complete_task": false,
+    "auto_send_warbond": false,
     "account_delay": 5,
     "countdown_loop": 3800
 }
